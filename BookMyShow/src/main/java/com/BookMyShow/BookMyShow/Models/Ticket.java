@@ -14,7 +14,7 @@ import java.util.List;
 @Entity              //class should be treated as a Table in a Database
 public class Ticket extends BaseModel{
        @ManyToOne
-       private Show show;
+       private MovieShow show;
 
        @ManyToMany
        private List<ShowSeat> showSeat;

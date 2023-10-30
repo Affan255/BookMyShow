@@ -6,11 +6,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
-public class Show extends BaseModel{
+public class MovieShow extends BaseModel{
     @ManyToOne
     private Auditorium auditorium;
 
@@ -21,6 +22,6 @@ public class Show extends BaseModel{
     private Movie movie;
 
     @OneToMany
-    private ShowSeat showSeat;
+    private List<ShowSeat> showSeat;
 
 }
